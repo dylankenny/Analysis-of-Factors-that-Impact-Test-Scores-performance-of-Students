@@ -1,4 +1,4 @@
-# Load dplyr library
+# use this when you want to switch between maths and english as you target variable
 library(dplyr)
 
 # Remove "MATH9" from year9_dataset using dplyr
