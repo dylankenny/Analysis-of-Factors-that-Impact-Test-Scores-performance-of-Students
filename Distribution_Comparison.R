@@ -1,4 +1,3 @@
-# Load required libraries
 library(tidyverse)
 
 # Identify pairs of variables to compare
