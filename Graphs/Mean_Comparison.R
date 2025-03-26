@@ -1,6 +1,5 @@
 library(tidyverse)
 
-# Assuming data_restored is already loaded
 # Extract base feature names (without the .5 or .9 suffix)
 base_features <- unique(gsub("\\.5$|\\.9$", "", names(data_restored)[grepl("\\.5$|\\.9$", names(data_restored))]))
 
