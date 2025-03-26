@@ -1,0 +1,34 @@
+# Define the features for year5_dataset
+year5_features <- c(
+  "ATTITUDE_ENG.5", "INTEREST_ENG.5", "CLASSMATERELATION.5", "CAMPUS_CONDITION.5",
+  "SATISIFACTION_LEARNING_MATH.5", "STRATEGY_MATH.5", "THR_MATH_NEW.5", 
+  "PISA_12_ST81_ENG.5", "THR_ENG_NEW.5", "HOMEWOK_CORR_MATH", "STRATEGE_ENG.5",
+  "SATISIFACTION_LEARNING_ENG.5", "HOMEWOK_CORR_ENG.5", "STUDYINTEREST_MATH.5",
+  "STEP_CLASSMATERELATION.5", "PISA_12_ST81_MATH.5", "MATH_ENG_STRESS_5",
+  "MANNERS.5", "SOCIAL_MORALS.5", "HARD_WORK.5", "MP_ADD_5", 
+  "SOLIDARITY_FRIENDSHIP.5", "MORAL_DUTY.5", "THRIFTY.5", "AWARE.5",
+  "SENSE_HONOR.5", "GRA_GEOMETRY.5", "SELF_PROTECTION.5", "_ENG_NEW.5", 
+  "MATH5", "ENG5"
+)
+
+# Define the features for year9_dataset
+year9_features <- c(
+  "ATTITUDE_ENG.9", "INTEREST_ENG.9", "CLASSMATERELATION.9", "STUDYINTEREST_MATH.9",
+  "CAMPUS_CONDITION.9", "STUDYATTITUDE_MATH_9", "SATISIFACTION_LEARNING_MATH.9",
+  "STRATEGY_MATH.9", "DISCLIMA", "THR_MATH_NEW.9", "PISA_12_ST81_ENG.9",
+  "THR_ENG_NEW.9", "SATISIFACTION_LEARNING_ENG.9", "STRATEGE_ENG.9",
+  "HOMEWOK_CORR_ENG.9", "STEP_CLASSMATERELATION.9", "PISA_12_ST81_MATH.9",
+  "MATH_ENG_STRESS_9", "MANNERS.9", "SOCIAL_MORALS.9", "SENSE_HONOR.9",
+  "HARD_WORK.9", "SOLIDARITY_FRIENDSHIP.9", "MORAL_DUTY.9", "THRIFTY.9",
+  "AWARE.9", "MP_ADD_9", "GRA_GEOMETRY.9", "SELF_PROTECTION.9", "ENG9", "MATH9"
+)
+
+# Create the datasets by selecting existing columns
+# First check which features actually exist in data_restored
+existing_year5_features <- intersect(year5_features, colnames(data_restored))
+existing_year9_features <- intersect(year9_features, colnames(data_restored))
+
+# Create the datasets with existing features
+year5_dataset <- data_restored[, existing_year5_features, drop = FALSE]
+year9_dataset <- data_restored[, existing_year9_features, drop = FALSE]
+
