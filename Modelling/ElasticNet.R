@@ -146,15 +146,14 @@ ggplot(head(importance_df, 15),
   ) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.1)))
 
-# Stop the parallel cluster after execution
-stopCluster(cl)
+#------------------------------------------------------------------------------------------
+# Calculate feature means using the optimal features only
+feature_means <- colMeans(year9_dataset_scaled[, optimal_features, drop = FALSE], na.rm = TRUE)
 
-# Get valid features that actually exist
-valid_features <- intersect(features, names(year9_dataset))
+# Save final model, optimal features, and feature means for later use
+saveRDS(rfe_result$fit, "EN_ENG9.rds")
+saveRDS(optimal_features, "opt_ft_ENG9.rds")
+saveRDS(feature_means, "feature_means_ENG9.rds")
 
-# Calculate means only for existing features
-feature_means <- colMeans(year9_dataset[valid_features], na.rm = TRUE)
-
-# Save with proper validation
-saveRDS(feature_means, "feature_means.rds")
-
+# Stop parallel processing when done
+stopImplicitCluster()
