@@ -1,7 +1,8 @@
-
+# Reading in dataset
 data = read.csv("School_Survey.csv")
 
-# Select the required features
+# Select the required features for modelling 
+# Removed "Results" features
 data_restored <- data %>%
   select(
     ATTITUDE_ENG.5, INTEREST_ENG.5, CLASSMATERELATION.5, CAMPUS_CONDITION.5,
