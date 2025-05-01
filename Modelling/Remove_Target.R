@@ -1,4 +1,9 @@
 # use this when you want to switch between maths and english as you target variable
+# Remove the feature that you are not using as a target variable
+# For example:
+#
+# Remove MATH9 when you are using ENG9 as you target variable 
+
 library(dplyr)
 
 # Remove "MATH9" from year9_dataset using dplyr
