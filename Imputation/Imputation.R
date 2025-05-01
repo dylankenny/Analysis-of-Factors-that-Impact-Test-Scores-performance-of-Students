@@ -7,6 +7,10 @@ library(VIM)
 library(naniar)
 library(missForest)
 
+# Load in data used in imputation
+# Removed the 4 target variables for this data as they did not need any imputation
+load("data_for_imputation.RData")
+
 # Function to calculate correlations and handle NA values
 calculate_missingness_correlations <- function(data_with_features_removed) {
   # Calculate missingness percentages
