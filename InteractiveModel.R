@@ -6,7 +6,7 @@ library(tibble)
 library(shinybusy)
 library(ggplot2)
 
-# Load saved model artifacts
+# Load saved model artifacts - name depends on ehat target variable you are modelling
 model <- readRDS("EN_ENG9.rds")
 all_features <- readRDS("opt_ft_ENG9.rds")
 feature_means <- readRDS("feature_means_ENG9.rds")
