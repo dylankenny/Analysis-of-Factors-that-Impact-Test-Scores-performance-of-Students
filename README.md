@@ -1,13 +1,13 @@
-## Analysis-of-Factors-that-Impact-Test-Scores-performance-of-Students
-# Goal:
+# Analysis-of-Factors-that-Impact-Test-Scores-performance-of-Students
+## Goal:
 
 Identify and quantify the most influential factors affecting standardized test scores in English and Mathematics at two critical educational stages.
 
-# Dataset:
+## Dataset:
 
 China Education Panel Survey (CEPS) - longitudinal data on 390 students, with over 70 variables per student, spanning academic, psychological, social, and institutional domains.
 
-# Key Steps:
+## Key Steps:
 
 Data Preprocessing: Scaling, splitting, and organizing data for analysis.
 
