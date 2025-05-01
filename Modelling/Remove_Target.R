@@ -4,6 +4,8 @@
 #
 # Remove MATH9 when you are using ENG9 as you target variable 
 
+# You then scale you dataset again using "ScaleDataSets.R"
+
 library(dplyr)
 
 # Remove "MATH9" from year9_dataset using dplyr
