@@ -147,6 +147,10 @@ ggplot(head(importance_df, 15),
   scale_y_continuous(expand = expansion(mult = c(0, 0.1)))
 
 #------------------------------------------------------------------------------------------
+###
+### Depening on what variable is your target variables, change the name of the saved RDS files to suit your target variable
+###
+
 # Calculate feature means using the optimal features only
 feature_means <- colMeans(year9_dataset_scaled[, optimal_features, drop = FALSE], na.rm = TRUE)
 
