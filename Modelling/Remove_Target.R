@@ -12,11 +12,11 @@ if (!"MATH9" %in% colnames(year9_dataset)) {
   cat("'MATH9' is still present in year9_dataset.\n")
 }
 
-# Remove "MATH9" from year9_dataset using dplyr
+# Remove "ENG5" from year5_dataset using dplyr
 year5_dataset <- year5_dataset %>%
   select(+ENG5)
 
-# Check if "MATH9" was removed
+# Check if "ENG5" was removed
 if (!"ENG5" %in% colnames(year5_dataset)) {
   cat("'MATH5' has been removed from year9_dataset.\n")
 } else {
